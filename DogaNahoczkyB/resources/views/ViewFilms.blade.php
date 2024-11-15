@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    asd
-    <!--
     <form action="{{route('film.get')}}">
        @csrf
-
+       <ul>
+       @foreach ($Kaka as kaki)
+       <li>{{kaki->Film_Name}}</li>
+       @endforeach
+        </ul>
     </form>
--->
 </body>
 </html>

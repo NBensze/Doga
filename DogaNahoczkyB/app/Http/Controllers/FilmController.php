@@ -16,7 +16,8 @@ class FilmController extends Controller
 
     public function filmsindex()
     {
-        return view("ViewFilms");
+        $Kaka = Film::all();
+        return view("ViewFilms", compact("Kaka"));
     }
 
     public function store(Request $Req)
