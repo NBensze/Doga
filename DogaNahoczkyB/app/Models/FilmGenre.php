@@ -11,4 +11,8 @@ class FilmGenre extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ["Film_Gen_Genre"];
+
+    public function filmgenre(){
+        return $this->belongsTo(FilmGenre::class);
+    }
 }

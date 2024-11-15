@@ -11,4 +11,8 @@ class Reservation extends Model
     use SoftDeletes, HasFactory;
 
     protected $fillable = ["Res_name", "Res_filmid", "Res_start", "Res_end"];
+
+    public function reservation(){
+        return $this->belongsTo(Reservation::class);
+    }
 }
