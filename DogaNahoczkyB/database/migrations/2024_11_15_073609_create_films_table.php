@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 return new class extends Migration
 {
@@ -13,7 +14,12 @@ return new class extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
+            $table->string("Film_Name");
+            $table->string("Film_Producer");
+            $table->string("Film_Genre");
+            $table->date("Film_Release");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
