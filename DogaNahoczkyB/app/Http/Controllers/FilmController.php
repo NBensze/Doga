@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Film;
+use App\Models\FilmGenre;
 use Illuminate\Http\Request;
 
 class FilmController extends Controller
 {
     public function index()
     {
-        return view("AddFilm");
+        $Genres = FilmGenre::all();
+        return view("AddFilm", compact("Genres"));
     }
 
     public function store(Request $Req)
@@ -28,6 +30,6 @@ class FilmController extends Controller
         'Film_Release' => $Req->Film_Release,
        ]);
 
-       return redirect()->back()->with('success', 'Film stored.');
+        return redirect()->back()->with('success', 'Film stored.');
     }
 }
