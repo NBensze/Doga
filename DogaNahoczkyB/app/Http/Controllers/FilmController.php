@@ -14,6 +14,11 @@ class FilmController extends Controller
         return view("AddFilm", compact("Genres"));
     }
 
+    public function filmsindex()
+    {
+        return view("ViewFilms");
+    }
+
     public function store(Request $Req)
     {
        $Req->validate([

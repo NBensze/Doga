@@ -25,4 +25,6 @@ Route::post('/new-genre', [FilmGenreController::class, 'store'])->name('genre.st
 Route::get('/new-film', [FilmController::class, 'index'])->name('film.index');
 Route::post('/new-film', [FilmController::class, 'store'])->name('film.store');
 
+Route::get('/films', [FilmController::class, 'filmsindex'])->name('film.filmsindex');
+
 require __DIR__.'/auth.php';

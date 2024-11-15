@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    asd
+    <!--
     <form action="{{route('film.get')}}">
+       @csrf
 
     </form>
+-->
 </body>
 </html>
