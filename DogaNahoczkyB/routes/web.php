@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmController;
 use App\Http\Controllers\FilmGenreController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +21,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/new-genre', [FilmGenreController::class, 'index'])->name('genre.index');
 Route::post('/new-genre', [FilmGenreController::class, 'store'])->name('genre.store');
+
+Route::get('/new-film', [FilmController::class, 'index'])->name('film.index');
+Route::post('/new-film', [FilmController::class, 'store'])->name('film.store');
 
 require __DIR__.'/auth.php';
